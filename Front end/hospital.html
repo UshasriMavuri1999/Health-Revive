@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+     <meta name="title" content="Hospital - Health Revive">
+<link rel="icon" type="image/png" href="../assets/img/icon.png">
+<style>
+
+        .fixed-nav {
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+          background-color: lightseagreen	;
+        }
+
+        .padding-top-form {
+        padding-top: 5rem;
+        }
+        .modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+  }
+
+  .modal-content{
+    position: fixed;
+    bottom: 0;
+    background-color: #fefefe;
+    width: 100%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+  }
+
+
+  .close{
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .modal-header {
+    padding: 2px 16px;
+    background-color: lightseagreen;
+    color: white;
+  }
+
+  .modal-body,.modal-body2 {padding: 2px 16px;}
+  @-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+  }
+
+  @keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+  }
+
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
+
+</style>
+<title>
+Hospital Dashboard
+
+</title>
+</head>
+
+  <body>
+      <nav class="fixed-nav">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">Assign organ</a>
+          <ul id="nav-mobile" class="right ">
+             <li><a href="reciever.html">Be a Reciever</a></li>
+          </ul>
+          <ul id="nav-mobile" class="right ">
+            <li><a href="donor.html">Donor</a></li>
+          </ul>
+          <ul id="nav-mobile" class="right">
+            <li><a href="history.html">History</a></li>
+          </ul>
+          <ul id="nav-mobile" class="right ">
+            <li><a href="login.html">Login</a></li>
+          </ul>
+          <ul id="nav-mobile" class="right ">
+            <li><a href="register.html">Register</a></li>
+          </ul>
+          <ul id="nav-mobile" class="right ">
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+    </div>
+  </nav>
+
+  <div class="row DonorForm center padding-top-form">
+
+        <div class="col m6 offset-m3">
+        <button type="button" name="button" class="col s12  btn" id="myBtn" >
+          <a style="color:white" href="#" data-target="hospitalList">Hospital preferred</a></button>
+
+        </div>
+
+        <div class="row">
+            <div class="col s12 m12 ">
+          <div class="card-panel white">
+            <span class="grey-text">
+                <div class="row">
+                    <div class="col s6 m6">
+          <div class="card-panel white">
+            <span class="grey-text">
+                <div class="row">
+      <div class="collection" >
+            <a class="collection-header"><h4>Donor List</h4></a>
+            <div id="donorList">
+            <a href="#!" class="collection-item">D1</a>
+            <a href="#!" class="collection-item ">D2</a>
+            <a href="#!" class="collection-item">D3</a>
+            <a href="#!" class="collection-item">D4</a>
+        </div>
+          </div>
+                </div>
+            </span>
+          </div>
+        </div>
+        <div class="col s6 m6  ">
+                <div class="card-panel white">
+                  <span class="grey-text">
+                      <div class="row">
+                            <div class="collection">
+                                <div id="receiverList">
+                                    <a class="collection-header"><h4>Reciever List</h4></a>
+                                    <a href="#!" class="collection-item">R1</a>
+                                    <a href="#!" class="collection-item ">R2</a>
+                                    <a href="#!" class="collection-item">R3</a>
+                                    <a href="#!" class="collection-item">R4</a>
+                                  </div>
+                      </div>
+                  </span>
+                </div>
+              </div>
+
+                </div>
+                <div class="row">
+                        <div class="input-field col s6 m6 offset-m3">
+                            <input  id="incentive" type="text" class="validate">
+                            <label for="incentive">Incentive</label>
+                        </div>
+                </div>
+                <div class="row">
+                        <div class="col s6 m6 offset-m3">
+                            <button id="assign" class="btn waves-effect waves-light" type="submit" name="action">Assign
+    <i class="material-icons right">send</i>
+  </button>
+                        </div>
+                </div>
+
+            </span>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div id="myModal" class="modal">
+
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h6>Select Hospitals</h6>
+          </div>
+          <div class="modal-body">
+        <form action="#">
+          <p>
+            <label>
+              <input type="checkbox" />
+              <span>Hospital1</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox"  />
+              <span>Hospital2</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" />
+              <span>Hospital3</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox"  />
+              <span>Hospital4</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" />
+              <span>Hospital5</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox"  />
+              <span>Hospital6</span>
+            </label>
+          </p>
+
+
+        </form>
+
+          </div>
+
+        </div>
+
+      </div>
+      <script>
+    var modal = document.getElementById("myModal");
+
+    var btn = document.getElementById("myBtn");
+
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+    modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+    }
+    </script>
+
+  </body>
+</html>

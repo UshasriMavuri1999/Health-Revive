@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+      name="viewport"
+    />
+    <meta name="title" content="Register - Health Revive" />
+    <link rel="icon" type="image/png" href="../assets/img/icon.png" />
+    <style>
+      .fixed-nav {
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+          background-color: lightseagreen	;
+        }
+
+        .padding-top-form {
+        padding-top: 5rem;
+        }
+    </style>
+    <title>Register</title>
+  </head>
+
+  <body>
+    <nav class="fixed-nav">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">Registration</a>
+
+          <ul id="nav-mobile" class="right ">
+              <li><a href="donor.html">Donor</a></li>
+          </ul>
+          <ul id="nav-mobile" class="right">
+              <li><a href="reciever.html">Reciever</a></li>
+            </ul>
+          <ul id="nav-mobile" class="right ">
+             <li><a href="history.html">History</a></li>
+          </ul>
+          <ul id="nav-mobile" class="right ">
+            <li><a href="hospital.html">Hospital</a></li>
+          </ul>
+          <ul id="nav-mobile" class="right ">
+            <li><a href="login.html">Login</a></li>
+          </ul>
+          <ul id="nav-mobile" class="right ">
+              <li><a href="../index.html">Home</a></li>
+          </ul>
+      </div>
+    </nav>
+
+
+    <div class="row DonorForm center padding-top-form">
+      <div class="col s12 m6 offset-m3 ">
+        <div class="card-panel white">
+          <span class="grey-text">
+            <div class="row"><h2>Enter your details</h2></div>
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s6 m6">
+                    <input id="first_name" type="text" class="validate" required />
+                    <label for="first_name">First Name</label>
+                  </div>
+                  <div class="input-field col s6 m6">
+                    <input id="last_name" type="text" class="validate" required />
+                    <label for="last_name">Last Name</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12 m12">
+                    <input id="email" type="email" class="validate" required/>
+                    <label for="email">Email-Id</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12 m12">
+                    <input id="blood_group" type="text" class="validate" required/>
+                    <label for="blood_group">Blood group</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12 m12">
+                    <input id="full_address" type="text" class="validate" />
+                    <label for="full_address">Full Address</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12 m12">
+                    <input id="problem" type="text" class="validate" />
+                    <label for="problem">Any Major Problem</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s6 m6 offset-m3">
+                    <button
+                      class="btn waves-effect waves-light"
+                      id="submit"
+                      type="submit"
+                      name="action"
+                    >
+                      Register <i class="material-icons right">send</i>
+                    </button>
+                  </div>
+                </div>
+                <p>Already a member?</p>
+                <div class="row">
+                  <div class="col s6 m6 offset-m3">
+                    <button
+                      class="btn waves-effect waves-light"
+                      type="button"
+                      onclick="location.href='login.html'"
+                    >
+                      Log In <i class="material-icons right">send</i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  </body>
+</html>
